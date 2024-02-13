@@ -7,11 +7,11 @@
         {
           "background": "#606060",
           "foreground": "#FAFAFA",
-          "powerline_symbol": "\ue0b0",
           "properties": {
             "windows": "\uf179"
           },
-          "style": "powerline",
+          "style": "diamond",
+          "leading_diamond": "\udb84\udf95",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
           "type": "os"
         },
@@ -36,14 +36,8 @@
           "type": "path"
         },
         {
-          "background": "#d2ff5e",
-          "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#ff9248{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f26d50{{ end }}",
-            "{{ if gt .Ahead 0 }}#89d1dc{{ end }}",
-            "{{ if gt .Behind 0 }}#f17c37{{ end }}"
-          ],
-          "foreground": "#193549",
+          "background": "#00539C",
+          "foreground": "#FFD662",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
@@ -52,23 +46,6 @@
           "style": "powerline",
           "template": " {{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "type": "git"
-        },
-        {
-          "background": "#00539C",
-          "background_templates": [
-            "{{ if gt .Code 0 }}#D2302C{{ end }}"
-          ],
-          "foreground": "#FFD662",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#F7F7F9{{ end }}"
-          ],
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "powerline",
-          "template": " \uf4b5 ",
-          "type": "status"
         }
       ],
       "type": "prompt"
@@ -104,12 +81,26 @@
           "type": "python"
         },
         {
+          "type": "executiontime",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b2",
+          "invert_powerline": true,
+          "foreground": "#FBF8BE",
+          "background": "#234E70",
+          "template": " <#FBF8BE></> {{ .FormattedMs }} ",
+          "properties": {
+            "threshold": 500,
+            "style": "austin",
+            "always_enabled": true
+          }
+        },
+        {
           "background": "#243665",
           "foreground": "#8BD8BD",
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "style": "powerline",
-          "template": "<#8BD8BD> \ue641 </>{{ .CurrentDate | date .Format }} ",
+          "template": "<#CCF381> \ue641 </>{{ .CurrentDate | date .Format }} ",
           "type": "time"
         }
       ],
@@ -128,7 +119,7 @@
         {
           "foreground": "#22c55e",
           "style": "plain",
-          "template": "\udb80\udc54 ",
+          "template": "\uf120",
           "type": "text"
         }
       ],
@@ -139,8 +130,8 @@
   "final_space": true,
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#16a34a",
-    "template": "{{if .Root}}\u26a1 {{end}}\ue691 "
+    "foreground": "#DCE2F0",
+    "template": "{{if .Root}}\u26a1 {{end}}\uebca "
   },
   "version": 2
 }
