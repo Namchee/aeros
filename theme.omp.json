@@ -5,27 +5,19 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#606060",
-          "foreground": "#FAFAFA",
+          "background": "#3D3B40",
+          "foreground": "#DDC6B6",
           "properties": {
             "windows": "\uf179"
           },
           "style": "diamond",
           "leading_diamond": "\udb84\udf95",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+          "template": " {{ if .WSL }}WSL {{ end }}{{.Icon}} ",
           "type": "os"
         },
         {
-          "background": "#606060",
-          "foreground": "#D6ED17",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
-          "template": "{{ .UserName }} ",
-          "type": "session"
-        },
-        {
-          "background": "#DCE2F0",
-          "foreground": "#50586C",
+          "background": "#525CEB",
+          "foreground": "#FFF548",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "folder_separator_icon": "/",
@@ -36,8 +28,8 @@
           "type": "path"
         },
         {
-          "background": "#00539C",
-          "foreground": "#FFD662",
+          "background": "#BFCFE7",
+          "foreground": "#50586C",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
@@ -85,9 +77,9 @@
           "style": "powerline",
           "powerline_symbol": "\ue0b2",
           "invert_powerline": true,
-          "foreground": "#FBF8BE",
-          "background": "#234E70",
-          "template": " <#FBF8BE></> {{ .FormattedMs }} ",
+          "foreground": "#121212",
+          "background": "#F8EDFF",
+          "template": " <#121212></> {{ .FormattedMs }} ",
           "properties": {
             "threshold": 500,
             "style": "austin",
@@ -100,7 +92,7 @@
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "style": "powerline",
-          "template": "<#CCF381> \ue641 </>{{ .CurrentDate | date .Format }} ",
+          "template": "<#8BD8BD> \ue641 </>{{ .CurrentDate | date .Format }} ",
           "type": "time"
         }
       ],
@@ -119,7 +111,7 @@
         {
           "foreground": "#22c55e",
           "style": "plain",
-          "template": "\uf120",
+          "template": "\udb85\udfa9",
           "type": "text"
         }
       ],
@@ -130,8 +122,8 @@
   "final_space": true,
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#DCE2F0",
-    "template": "{{if .Root}}\u26a1 {{end}}\uebca "
+    "foreground": "#22c55e",
+    "template": "{{if .Root}}\u26a1 {{end}}\udb80\udc54 "
   },
   "version": 2
 }
